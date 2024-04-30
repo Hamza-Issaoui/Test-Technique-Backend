@@ -1,7 +1,7 @@
-Créez une base de données MongoDB nommée "dbTest-technique".
+1- Créez une base de données MongoDB nommée "dbTest-technique".
 
-Clonez le dépôt avec la commande;    git clone https://github.com/Hamza-Issaoui/Test-Technique-Backend.git
+2- Clonez le dépôt avec la commande;    git clone https://github.com/Hamza-Issaoui/Test-Technique-Backend.git
 
-Installez les dépendances avec la commande:    npm install
+3- Installez les dépendances avec la commande:    npm install
 
-Lancez le serveur avec la commande:   npm run start
+4- Lancez le serveur avec la commande:   npm run start
