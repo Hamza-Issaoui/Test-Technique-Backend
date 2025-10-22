@@ -1,14 +1,12 @@
-const route = require("express").Router();
-const authController = require("../Controllers/authController");
-const check_auth = require("../Middlewares/check_authentification");
+import { Router } from "express";
+import authController from "../Controllers/authController.js";
+import check_auth from "../Middlewares/check_authentification.js";
+
+const route = Router();
 
 route.post("/registerUser", authController.registerUser);
-
 route.post("/login", authController.logIn);
-
 route.post("/refreshToken", check_auth, authController.refreshToken);
 
-
-
-module.exports = route;
+export default route;
 

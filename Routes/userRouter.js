@@ -1,13 +1,14 @@
-const route = require("express").Router();
-const userController = require("../Controllers/userController");
-const check_auth = require("../Middlewares/check_authentification");
+import { Router } from "express";
+import userController from "../Controllers/userController.js";
+import check_auth from "../Middlewares/check_authentification.js";
+
+const route = Router();
+
+route.get("", check_auth, userController.GetAllUsers);
+route.get("/:id", check_auth, userController.GetUserById)
+route.put("/:id", check_auth, userController.UpdateUser)
+route.delete("/:id", check_auth, userController.DeleteUser)
 
 
-route.get("", userController.GetAllUsers);
-route.get("/:id", userController.GetUserById)
-route.put("/:id", userController.UpdateUser)
-route.delete("/:id", userController.DeleteUser)
 
-
-
-module.exports = route;
+export default route;
